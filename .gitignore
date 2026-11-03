@@ -1,0 +1,14 @@
+# --- linked into the shared cache, NOT committed (run ./setup.sh to materialize) ---
+/sdk
+/bin/thymercli
+/examples
+
+# deps / build output
+node_modules/
+dist/*
+# ...except the pasteable IIFE bundle — the only installable form on GitHub
+!dist/plugin.js
+
+# browser-automation output / OS
+.playwright-mcp/
+.DS_Store

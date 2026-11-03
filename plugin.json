@@ -1,0 +1,26 @@
+{
+  "ver": 1,
+  "name": "Related Sections",
+  "icon": "ti-layout-list",
+  "description": "Keeps titled native query blocks at the bottom of pages, with queries that can follow the page's own fields.",
+  "custom": {
+    "sections": {
+      "Meetings": [
+        {
+          "title": "To discuss",
+          "query": "@page @collection=\"Discussions\" {links: self, self.Attendees, self.Organizers} @Discussions.Status!=\"Done\""
+        }
+      ],
+      "People": [
+        {
+          "title": "To discuss",
+          "query": "@page @collection=\"Discussions\" {links: self} @Discussions.Status!=\"Done\""
+        },
+        {
+          "title": "Meetings",
+          "query": "@page @collection=\"Meetings\" {links: self} @sort=-\"Meetings\".\"Date\""
+        }
+      ]
+    }
+  }
+}
